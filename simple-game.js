@@ -1,3 +1,4 @@
+//////////////the birds movement////////////////////////////
 var xpos = 250
 document.addEventListener("keydown", function(e) {
 if (e.keyCode == 37) {
@@ -23,4 +24,15 @@ if (e.keyCode == 38) {
   document.getElementById("bird").setAttribute("y", ypos + 15)
   ypos = ypos + 15;
 }
+})
+
+/////overlap///////
+canvas.addEventListener(function (e) {
+  var bird = document.getElementById("bird")
+  var food = document.getElementById("taco")
+
+  If(bird.x > food.x)
+  {
+    restart.annimation
+  }
 })
