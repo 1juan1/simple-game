@@ -1,3 +1,8 @@
+var canvas =  document.getElementById("canvas")
+
+
+
+
 //////////////the birds movement////////////////////////////
 var xpos = 250
 document.addEventListener("keydown", function(e) {
@@ -27,12 +32,20 @@ if (e.keyCode == 38) {
 })
 
 /////overlap///////
-canvas.addEventListener(function (e) {
-  var bird = document.getElementById("bird")
-  var food = document.getElementById("taco")
+canvas.addEventListener("click" ,function (e) {
+  var bird1 = document.getElementById.attribute("bird")
+  var taco1 = document.getElementById.attribute("taco")
 
-  If(bird.x > food.x)
+birdx = Number(bird1.getAttribute("x"))
+birdy = Number(bird1.getAttribute("y"))
+
+foodx = Number(taco1.getAttribute("x"))
+foody = Number(taco1.getAttribute("y"))
+
+  if (birdx  > foodx && birdx < foodx + width)
   {
-    restart.annimation
+
+    taco1.setAttribute("begin", "food1.end")
+  
   }
 })
