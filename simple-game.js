@@ -1,6 +1,9 @@
 var canvas =  document.getElementById("canvas")
 
-
+function randomNumberGenerator(min,max)
+{
+ return Math.floor(Math.random()*(max-min+1)+min);
+}
 
 
 //////////////the birds movement////////////////////////////
@@ -48,14 +51,21 @@ var foodwidth1 = Number(taco1.getAttribute("width"));
 var foodheight1 = Number(taco1.getAttribute("height"));
 
 
+var random = randomNumberGenerator(1,300);
+
 if (birdx > foodx && birdx < foodx + foodwidth && birdy > foody &&  birdy < foody + foodheight) {
+  taco.setAttribute("y", random);
   console.log("overlap");
 }
 
 
+
  if (birdx > foodx1 && birdx < foodx1 + foodwidth1 && birdy > foody1 &&  birdy < foody1 + foodheight1) {
   console.log('overlap');
+    taco2.setAttribute("y", random);
 }
 })
+
+
 
 /////overlap///////
