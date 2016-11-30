@@ -1,4 +1,5 @@
 var canvas =  document.getElementById("canvas")
+var foodeaten = 0;
 
 function randomNumberGenerator(min,max)
 {
@@ -56,6 +57,11 @@ var random = randomNumberGenerator(1,300);
 if (birdx > foodx && birdx < foodx + foodwidth && birdy > foody &&  birdy < foody + foodheight) {
   taco.setAttribute("y", random);
   console.log("overlap");
+  var random = randomNumberGenerator(1,300)
+  document.getElementById("taco").setAttribute("x",random)
+  foodeaten = foodeaten + 1;
+  document.getElementById("score").textContent = foodeaten;
+
 }
 
 
@@ -63,7 +69,17 @@ if (birdx > foodx && birdx < foodx + foodwidth && birdy > foody &&  birdy < food
  if (birdx > foodx1 && birdx < foodx1 + foodwidth1 && birdy > foody1 &&  birdy < foody1 + foodheight1) {
   console.log('overlap');
     taco2.setAttribute("y", random);
+    var random = randomNumberGenerator(1,300)
+    document.getElementById("taco").setAttribute("x",random)
+    foodeaten = foodeaten + 1;
+    document.getElementById("score").textContent = foodeaten;
+
 }
+
+
+
+
+
 })
 
 
