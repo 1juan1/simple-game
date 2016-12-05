@@ -1,7 +1,7 @@
 var canvas =  document.getElementById("canvas")
 var foodeaten = 0;
-var timeStart = Date.now()
-var endTime;
+var timeStart = Date.now();
+
 function randomNumberGenerator(min,max)
 {
  return Math.floor(Math.random()*(max-min+1)+min);
@@ -51,7 +51,7 @@ var foodx1 = Number(taco1.getAttribute("x"));
 var foody1 = Number(taco1.getAttribute("y"));
 var foodwidth1 = Number(taco1.getAttribute("width"));
 var foodheight1 = Number(taco1.getAttribute("height"));
-var timeStart = Date.now();
+
 
 
 var random = randomNumberGenerator(1,300);
@@ -80,11 +80,12 @@ if (birdx > foodx && birdx < foodx + foodwidth && birdy > foody &&  birdy < food
 }
 
 if(foodeaten == 3) {
-document.getElementById("score").textContent = foodeaten;
-document.getElementById("canvas").pauseAnimations()
-  var timestop =  Date.now();
-  endTime = (timestop - timeStart)/1000
-  document.getElementById("time2").textContent = endTime;
+  document.getElementById("canvas").pauseAnimations()
+  document.getElementById("score").textContent = foodeaten;
+  var timeStop = Date.now();
+  var gameDuration = (timeStop - timeStart) / 1000
+  console.log("timestop " + timeStop + " timestart " + timeStart + " duration " + gameDuration)
+  document.getElementById("gameDuration").textContent = gameDuration
 }
 })
 
